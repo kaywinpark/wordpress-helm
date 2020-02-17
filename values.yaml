@@ -1,0 +1,14 @@
+mysqlPvc:
+  storage: 8Gi
+
+mysql:
+  rootPassword: "wordpress"
+  databaseName: "wordpress"
+  user: "wordpress"
+  password: "wordpress"
+
+wordpress:
+  dbHost: wordpress-mysql
+  dbName: "wordpress"
+  dbUser: "wordpress"
+  dbPassword: "wordpress"
