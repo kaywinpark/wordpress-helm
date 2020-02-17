@@ -7,6 +7,9 @@ mysql:
   user: "wordpress"
   password: "wordpress"
 
+wordpressPvc:
+  storage: 8Gi
+
 wordpress:
   dbHost: wordpress-mysql
   dbName: "wordpress"
