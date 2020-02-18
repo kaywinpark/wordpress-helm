@@ -15,3 +15,14 @@ wordpress:
   dbName: "wordpress"
   dbUser: "wordpress"
   dbPassword: "wordpress"
+
+VirtualServer:
+  host: example.org
+  upstreams:
+    name: wordpress
+    service: wordpress
+    port: 80
+  routes:
+    path: /
+    action:
+      pass: wordpress
