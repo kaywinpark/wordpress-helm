@@ -3,12 +3,12 @@ kind: VirtualServer
 metadata:
   name: wordpress
 spec:
-  host: {{ values.virtualServer.host }}
+  host: {{ Values.virtualServer.host }}
   upstreams:
-  - name: {{ values.virtualServer.upstreams.name }}
-    service: {{ values.virtualServer.upstreams.service }}
-    port: {{ values.virtualServer.upstreams.port }}
+  - name: {{ Values.virtualServer.upstreams.name }}
+    service: {{ Values.virtualServer.upstreams.service }}
+    port: {{ Values.virtualServer.upstreams.port }}
   routes:
-  - path: {{ values.virtualServer.routes.path }}
+  - path: {{ Values.virtualServer.routes.path }}
     action:
-      pass: {{ values.virtualServer.routes.action.pass }}
+      pass: {{ Values.virtualServer.routes.action.pass }}
