@@ -4,6 +4,10 @@ metadata:
   name: wordpress
 spec:
   host: {{ .Values.virtualServer.host }}
+  tls:
+    secret: nginx-tls
+    redirect:
+      enable: true
   upstreams:
   - name: {{ .Values.virtualServer.upstreams.name }}
     service: {{ .Values.virtualServer.upstreams.service }}
