@@ -16,7 +16,7 @@ wordpress:
   dbUser: "wordpress"
   dbPassword: "wordpress"
 
-VirtualServer:
+virtualServer:
   host: example.org
   upstreams:
     name: wordpress
