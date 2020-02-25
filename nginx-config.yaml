@@ -1,0 +1,5 @@
+controller:
+    image:
+      tag: latest
+      repository: localhost:32000/nginx-ingress
+      pullPolicy: Always
