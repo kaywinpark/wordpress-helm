@@ -1,0 +1,17 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServerRoute
+metadata:
+  name: ns2
+  namespace: ns2
+spec:
+  host: {{ .Values.virtualServerRoute.host }}
+  upstreams:
+  - name: nginx2
+    service: nginx2
+    port: 80
+  subroutes:
+  - path: /ns2
+    action:
+      pass: nginx2
+    snippet: |
+      rewrite /ns2$ /$1  break;

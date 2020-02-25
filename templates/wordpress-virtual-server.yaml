@@ -4,10 +4,10 @@ metadata:
   name: wordpress
 spec:
   host: {{ .Values.virtualServer.host }}
-  tls:
-    secret: nginx-tls
-    redirect:
-      enable: true
+  # tls:
+  #   secret: nginx-tls
+  #   redirect:
+  #     enable: true
   upstreams:
   - name: {{ .Values.virtualServer.upstreams.name }}
     service: {{ .Values.virtualServer.upstreams.service }}
@@ -16,3 +16,7 @@ spec:
   - path: {{ .Values.virtualServer.routes.path }}
     action:
       pass: {{ .Values.virtualServer.routes.action.pass }}
+  - path: {{ .Values.virtualServer.routes.pathNs1 }}
+    route: {{ .Values.virtualServer.routes.routeNs1 }}
+  - path: {{ .Values.virtualServer.routes.pathNs2 }}
+    route: {{ .Values.virtualServer.routes.routeNs2 }}

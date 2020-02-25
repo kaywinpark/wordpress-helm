@@ -26,3 +26,10 @@ virtualServer:
     path: /
     action:
       pass: wordpress
+    pathNs1: /ns1
+    routeNs1: ns1/ns1
+    pathNs2: /ns2
+    routeNs2: ns2/ns2
+
+virtualServerRoute:
+  host: example.org
